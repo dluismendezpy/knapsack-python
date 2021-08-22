@@ -10,7 +10,10 @@ class Knapsack_Dinamic_Programming:
         value1 = 0
 
         if item_weights[currentIndex] <= item_capacity:
-            value1 = item_value[currentIndex] + Knapsack_Dinamic_Programming.knapsack_solution(item_value, item_weights, item_capacity - item_weights[currentIndex], currentIndex+1)
+            value1 = item_value[currentIndex] + Knapsack_Dinamic_Programming.knapsack_solution(item_value, 
+                                                                                               item_weights, 
+                                                                                               item_capacity - item_weights[currentIndex], 
+                                                                                               currentIndex+1)
 
         value2 = Knapsack_Dinamic_Programming.knapsack_solution(item_value, item_weights, item_capacity, currentIndex + 1)
 
